@@ -1,0 +1,334 @@
+{
+	"info": {
+		"_postman_id": "96066f60-b694-4a0a-bf71-f922c4adf2b1",
+		"name": "GroceryAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13936057",
+		"_collection_link": "https://cloudy-eclipse-682277.postman.co/workspace/New-Team-Workspace~ce1b6f92-6860-46e8-80cb-c4478d23caf6/collection/13936057-96066f60-b694-4a0a-bf71-f922c4adf2b1?action=share&source=collection_link&creator=13936057"
+	},
+	"item": [
+		{
+			"name": "http://localhost:5000/api/auth/register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Mangesh Mahajan\",\n  \"email\": \"mangesh@gmail.com\",\n  \"password\": \"Man9esh\",\n  \"role\": \"admin\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				},
+				"description": "Auth Register"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/auth/login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"mangesh@gmail.com\",\n  \"password\": \"Man9esh\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				},
+				"description": "Auth Login"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/groceries",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearear eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInJvbGUiOiJhZG1pbiIsImlhdCI6MTczOTk1NjM2NywiZXhwIjoxNzM5OTU5OTY3fQ.gwdTI_inU_2iRg_mxBulQY8McuE65b3dWa-E7MRdF3o",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/groceries",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"groceries"
+					]
+				},
+				"description": "Get all Groceries list"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/groceries",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearear eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInJvbGUiOiJhZG1pbiIsImlhdCI6MTczOTk1NjM2NywiZXhwIjoxNzM5OTU5OTY3fQ.gwdTI_inU_2iRg_mxBulQY8McuE65b3dWa-E7MRdF3o",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Temporary\",\n  \"category\": \"Fruits\",\n  \"price\": 120,\n  \"stock\": 100\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/groceries",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"groceries"
+					]
+				},
+				"description": "Add new Grocery to list"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/groceries/2",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearear eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInJvbGUiOiJhZG1pbiIsImlhdCI6MTczOTk1NjM2NywiZXhwIjoxNzM5OTU5OTY3fQ.gwdTI_inU_2iRg_mxBulQY8McuE65b3dWa-E7MRdF3o",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"price\": 250\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/groceries/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"groceries",
+						"4"
+					]
+				},
+				"description": "Update Grocery by Id"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/groceries/1",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearear eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInJvbGUiOiJhZG1pbiIsImlhdCI6MTczOTk1NjM2NywiZXhwIjoxNzM5OTU5OTY3fQ.gwdTI_inU_2iRg_mxBulQY8McuE65b3dWa-E7MRdF3o",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/groceries/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"groceries",
+						"5"
+					]
+				},
+				"description": "Delete Grocery by Id"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/orders",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearear eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInJvbGUiOiJhZG1pbiIsImlhdCI6MTczOTk1NjM2NywiZXhwIjoxNzM5OTU5OTY3fQ.gwdTI_inU_2iRg_mxBulQY8McuE65b3dWa-E7MRdF3o",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"orders"
+					]
+				},
+				"description": "Get All Orders List"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/orders/",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearear eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInJvbGUiOiJhZG1pbiIsImlhdCI6MTczOTk1NjM2NywiZXhwIjoxNzM5OTU5OTY3fQ.gwdTI_inU_2iRg_mxBulQY8McuE65b3dWa-E7MRdF3o",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"items\": [\n    {\n      \"grocery_id\": 5,\n      \"quantity\": 15\n    },\n    {\n      \"grocery_id\": 5,\n      \"quantity\": 15\n    }\n  ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/orders/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"orders",
+						""
+					]
+				},
+				"description": "Craete a New Order"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/orders/admin",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearear eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInJvbGUiOiJhZG1pbiIsImlhdCI6MTczOTk1NjM2NywiZXhwIjoxNzM5OTU5OTY3fQ.gwdTI_inU_2iRg_mxBulQY8McuE65b3dWa-E7MRdF3o",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/orders/admin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"orders",
+						"admin"
+					]
+				},
+				"description": "Get All Orders High Level Information"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/orders/admin/2",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearear eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInJvbGUiOiJhZG1pbiIsImlhdCI6MTczOTk1NjM2NywiZXhwIjoxNzM5OTU5OTY3fQ.gwdTI_inU_2iRg_mxBulQY8McuE65b3dWa-E7MRdF3o",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/orders/admin/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"orders",
+						"admin",
+						"2"
+					]
+				},
+				"description": "Get Order Details By Order Id"
+			},
+			"response": []
+		}
+	]
+}
